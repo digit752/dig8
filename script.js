@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const path = window.location.pathname;
     const page = path.split("/").pop();
-    const currentPage = parseInt(page.replace(".html", "")) || 1;
-    const totalPages = 31;
+    const currentPage = parseInt(page.replace(".html", "")) || 24;
+    const totalPages = 26;
 
     // Membuat container utama navigasi atas
     const topNav = document.createElement("div");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navWrapper = document.createElement("div");
     navWrapper.className = "nav-wrapper";
 
-    for (let i = 1; i <= totalPages; i++) {
+    for (let i = 24; i <= totalPages; i++) {
         const link = document.createElement("a");
         link.href = `${i}.html`;
         link.innerText = i;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.prepend(topNav);
 
     // Bagian tombol melayang (Kiri & Kanan)
-    if (currentPage > 1) {
+    if (currentPage > 24) {
         const prevBtn = document.createElement("a");
         prevBtn.href = `${currentPage - 1}.html`;
         prevBtn.innerHTML = "❮";
